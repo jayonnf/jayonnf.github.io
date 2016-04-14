@@ -1,17 +1,10 @@
 <html>
 	<body>
-		<button type="button" onclick="loadDoc()">Request data</button>
+		<button type="button" onclick="getAuthentication()">Request data</button>
 		<p id="demo"></p>
 		<script>
-		function loadDoc() {
-		var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (xhttp.readyState == 4 && xhttp.status == 200) {
-					document.getElementById("demo").innerHTML = xhttp.responseText;
-				}
-			};
-			xhttp.open("GET", "demo_get.asp", true);
-			xhttp.send();
+		function getAuthentication() {
+			location.replace("https://www.instagram.com/oauth/authorize/?client_id=6e19e7141ea8477e812cc03ed74ddcce&redirect_uri=http://jayonnf.github.io&response_type=token");
 		}
 		</script>
 	</body>
